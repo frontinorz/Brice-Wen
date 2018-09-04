@@ -1,11 +1,13 @@
 <template lang="pug">
 #app
-  pageProfile
-  pageSkill
-  pageCareer
-  pageWorks
-  pageContact
-  siteFooter
+  siteHeader
+  pageProfile#profile.sec
+  pageSkill#skill.sec
+  pageCareer#career.sec
+  pageWorks#works.sec
+  pageContact#contact.sec
+
+
 </template>
 
 <script>
@@ -14,7 +16,6 @@ import pageProfileVue from './component/pageProfile.vue';
 import pageSkillVue from './component/pageSkill.vue';
 import pageWorksVue from './component/pageWorks.vue';
 import siteHeaderVue from './component/siteHeader.vue';
-import siteFooterVue from './component/siteFooter.vue';
 import pageCareerVue from './component/pageCareer.vue';
 import pageContactVue from './component/pageContact.vue';
 
@@ -27,15 +28,30 @@ export default {
     pageWorks: pageWorksVue,
     pageContact: pageContactVue,
     siteHeader: siteHeaderVue,
-    siteFooter: siteFooterVue,
   },
   data () {
     return {
-
+      secs: [],
     }
   },
-  methods: {
+  created() {
+    const self = this;
+    $(window).scroll(function() {
+      $('.sec').each(function() {
+        if(self.scrollNow(this)){
+          $(this).addClass('inView');
+        }
+      });
+    });
 
+  },
+  methods: {
+    scrollNow(sec){
+      const secTop = $(sec).offset().top;
+      const winBot = $(window).scrollTop() + $(window).height();
+
+      return winBot >= secTop * 1.2 ;
+    }
   },
 }
 </script>
@@ -48,7 +64,6 @@ export default {
   font-family: 'Microsoft JhengHei', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
 }
 
 .pagetitle{
@@ -57,7 +72,7 @@ export default {
     letter-spacing: 3px;
     font-weight: bold;
     text-align: center;
-    margin-bottom:2rem;
+    margin-bottom:3rem;
 }
 .pagetitle-odd{
   color: $color-hl-2;
@@ -67,6 +82,9 @@ export default {
     height: 0.2rem;
     background: #aaa;
     margin-bottom: 1rem;
+}
+.active{
+  background: #fff;
 }
 
 </style>

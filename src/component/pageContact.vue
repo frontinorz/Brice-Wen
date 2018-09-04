@@ -7,7 +7,8 @@
                 i.fab.fa-github
             a(href="https://codepen.io/frontinorz/" target="_blank")
                 i.fab.fa-codepen
-        .email frontinorz@gmail.com
+        a.email(href="mailto:frontinorz@gmail.com") frontinorz@gmail.com
+    .foot © Brice Wen 2018
 </template>
 
 <script>
@@ -18,23 +19,34 @@ export default {
 
 <style lang="scss" scoped>
 @import "./src/assets/style/_variable.scss";
-
 .pagecontact{
     width: 100%;
-    height: 50vh;
+    //min-height: 40vh;
+    position: relative;
+    display: grid;
+    align-items: center;
     background: $color-main-1;
-    padding: 4rem $pd-desktop-lg;
+    padding: 2rem $pd-desktop-lg;
     color: #eee;
     @include breakpoint(desktop){
-        padding: 4rem $pd-desktop ;
+        padding: 2rem $pd-desktop;
+    }
+    @include breakpoint(tablet){
+        padding: 2rem $pd-tablet;
+    }
+    @include breakpoint(phone){
+        padding: 2rem $pd-phone;
     }
 }
 
 .contact{
+    height: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 2rem;
 }
 
 .linkgroup{
@@ -46,9 +58,8 @@ export default {
     }
     i{
         cursor: pointer;
-        font-size: 5rem;
+        font-size: 4rem;
         margin: 0;
-        //transition: color 0.1s;
         &:hover{
             color: lighten($color-main-2, 20);
         }
@@ -58,6 +69,13 @@ export default {
 .email{
     margin-top: 1.5rem;
     font-size: 2rem;
+    &:hover{
+        color: lighten($color-main-2, 20);
+    }
+}
+.foot{
+    text-align: center;
+    align-self: end
 }
 
 </style>

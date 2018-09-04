@@ -7,7 +7,6 @@
             h1.name__cht 溫志桓
             h3.name__eng Brice
         .info
-            //h4.school 元智大學─資訊傳播學系
             i.icon.fas.fa-map-marker-alt
             span.city 新竹
     .desciption
@@ -86,5 +85,8 @@ export default {
         margin-bottom: 0.2rem;
         letter-spacing: 1px;
     }
+}
+.inView{
+
 }
 </style>

@@ -61,28 +61,45 @@ export default {
     color: #eee;
     background: $color-main-2;
     padding: 4rem $pd-desktop-lg;
-    padding-bottom: 10rem;
+    padding-bottom: 6rem;
     @include breakpoint(desktop){
-        padding: 4rem $pd-desktop ;
+        padding: 4rem $pd-desktop;
+        padding-bottom: 6rem;
+    }
+    @include breakpoint(tablet){
+        padding: 4rem $pd-tablet;
+        padding-bottom: 6rem;
+    }
+    @include breakpoint(phone){
+        padding: 4rem $pd-phone;
+        padding-bottom: 6rem;
     }
 }
 
 .skill{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
     grid-gap: 2rem;
+    @include breakpoint(tablet){
+        //padding: 2rem $pd-tablet;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+    @include breakpoint(phone){
+        //padding: 2rem $pd-phone;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
 }
 .group{
     padding: 1rem;
     position: relative;
     background: rgba(255,255,255,0.1);
+    opacity: 0;
 }
-@for $i from 0 to 5{
-    .group:nth-child(#{$i+1}){
 
-    }
-}
 .list{
     margin-left: 0.5rem;
 }
@@ -97,5 +114,18 @@ export default {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+}
+
+.inView{
+    @for $i from 0 to 6{
+        .group:nth-child(#{$i+1}){
+            animation: fadeIn 0.8s $i*0.3s both;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0%{opacity: 0; transform: translateY(-1rem);}
+    100%{opacity: 1; transform: translateY(0rem);}
 }
 </style>

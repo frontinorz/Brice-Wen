@@ -127,3 +127,37 @@ a{
   text-decoration: none;
   color: inherit;
 }
+
+//----RWD----
+@mixin breakpoint($point) {
+  @if $point==desktop-lg {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
+  @if $point==desktop {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  }
+  @if $point==tablet {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $point==phone {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+}
+html{
+    font-size: 16px;
+    @include breakpoint(tablet) {
+      font-size: 14px;
+    }
+
+    @include breakpoint(phone) {
+      font-size: 12px;
+    }
+}
