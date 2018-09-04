@@ -14,18 +14,19 @@
 </template>
 
 <script>
-import WorkscompVue from './Workscomp.vue';
+
+
 const workslist = [
     {
         name: 'Workoutube',
-        img: './src/assets/workoutube.jpg',
+        img: '/dist/workoutube.jpg',
         desc: '運用Youtube作為輔助，快速建立自己的健身筆記',
         tech: ['RWD','Vue-cli SPA','Vue-youtube','Localstorage'],
         link: 'https://frontinorz.github.io/workoutube/#/'
     },
     {
         name: '新竹UBike',
-        img: './src/assets/ubike.jpg',
+        img: '/dist/ubike.jpg',
         desc: '運用Google Map及衛星定位快速找查附近的Youbike站點',
         tech: ['RWD','Vue.js','HTML5 Geolocation','Google Maps API'],
         link: 'https://frontinorz.github.io/Google-map/'
@@ -34,11 +35,9 @@ const workslist = [
 
 export default {
     name: 'pageworks',
-    components: {
-        workscomp: WorkscompVue,
-    },
     data(){
         return {
+            url: '../assets/workoutube.jpg',
             list: workslist,
             now: workslist[0],
             index: 0,
