@@ -2,6 +2,9 @@
 
 > first resume website
 
+## Demo
+https://frontinorz.github.io/Brice-Wen/
+
 ## Build Setup
 
 ``` bash
