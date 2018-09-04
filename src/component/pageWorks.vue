@@ -19,14 +19,14 @@
 const workslist = [
     {
         name: 'Workoutube',
-        img: '/dist/workoutube.jpg',
+        img: './dist/workoutube.jpg',
         desc: '運用Youtube作為輔助，快速建立自己的健身筆記',
         tech: ['RWD','Vue-cli SPA','Vue-youtube','Localstorage'],
         link: 'https://frontinorz.github.io/workoutube/#/'
     },
     {
         name: '新竹UBike',
-        img: '/dist/ubike.jpg',
+        img: './dist/ubike.jpg',
         desc: '運用Google Map及衛星定位快速找查附近的Youbike站點',
         tech: ['RWD','Vue.js','HTML5 Geolocation','Google Maps API'],
         link: 'https://frontinorz.github.io/Google-map/'
