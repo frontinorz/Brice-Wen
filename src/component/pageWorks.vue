@@ -82,9 +82,11 @@ export default {
     height: 100%;
     display: grid;
     align-items: center;
+    align-content: center;
     justify-content: center;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
+    justify-items: center;
+    grid-template-columns: auto auto;
+    grid-gap: 4rem;
     @include breakpoint(desktop){
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -94,6 +96,7 @@ export default {
     }
 }
 .work{
+    max-width: 600px;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -114,6 +117,7 @@ export default {
         &__img{
             width: 100%;
             height: 100%;
+
         }
         &__info{
             position: absolute;;
@@ -171,33 +175,11 @@ export default {
             }
         }
 }
-.btn{
-    font-size: 2.5rem;
-    text-align: center;
-    align-self: center;
-    width: 3rem;
-    cursor: pointer;
-    &:hover{
-        color: $color-hl-2;
-    }
-}
-.btn__prev{
-    transition: transform 0.3s;
-    &:hover{
-        transform: translateX(-0.5rem);
-    }
-}
-.btn__next{
-    transition: transform 0.3s;
-    &:hover{
-        transform: translateX(0.5rem);
-    }
-}
 .inView{
     .work{
-        animation: fadeIn-Top 0.3s both;
+        animation: fadeIn-Top 0.8s both;
         &:nth-child(2){
-            animation-delay: 0.3s;
+            animation-delay: 0.8s;
         }
     }
 }

@@ -1,10 +1,9 @@
 <template lang="pug">
 .profile
-    //.bgimg
     .about
         .picture
         .name
-            h1.name__cht 溫志桓
+            h1.name__cht 温志桓
             h3.name__eng Brice
         .info
             i.icon.fas.fa-map-marker-alt
@@ -41,7 +40,6 @@ export default {
     min-height: 100vh;
     padding-top: 20vh;
     background: $color-main-1;
-    //background: transparent;;
     color: #eee;
     display: flex;
     align-items: center;
@@ -50,11 +48,23 @@ export default {
 }
 .about{
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: fadeIn-Top 1s both;
 }
 .picture{
-    width: 150px;
-    height: 150px;
-    background: #eee;
+    width: calc(100vw / 5);
+    height: calc(100vw / 5);
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 80px;
+    min-height: 80px;
+    background-color: #eee;
+    background: url('~/./dist/self.jpg');
+    background-size: cover;
+    background-position: center center;
     border-radius: 100%;
     margin-bottom: 1rem;
 }
@@ -81,12 +91,19 @@ export default {
 }
 
 .desciption{
+    animation: fadeIn-Bot 1s 0.5s both;
     p{
         margin-bottom: 0.2rem;
         letter-spacing: 1px;
     }
 }
-.inView{
 
+@keyframes fadeIn-Top {
+    0%{ opacity: 0; transform: translateY(-1rem);}
+    100%{ opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeIn-Bot {
+    0%{ opacity: 0; transform: translateY(1rem);}
+    100%{ opacity: 1; transform: translateY(0);}
 }
 </style>

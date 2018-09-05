@@ -61,7 +61,8 @@ export default {
 
 #app{
   width: 100%;
-  font-family: 'Microsoft JhengHei', Helvetica, Arial, sans-serif;
+  min-width: 300px;
+  font-family: 'Noto Sans','Microsoft JhengHei', Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -69,8 +70,8 @@ export default {
 .pagetitle{
     color: $color-hl-1;
     font-size: 2.5rem;
-    letter-spacing: 3px;
-    font-weight: bold;
+    letter-spacing: 5px;
+    //font-weight: bold;
     text-align: center;
     margin-bottom:3rem;
 }

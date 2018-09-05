@@ -8,7 +8,7 @@
             .line
     .overlay(:class="{'overlay__active' : isList}")
         .list
-            a.sectag(href="#profile"  @click="isList = !isList") PROFILE
+            a.sectag(href="#profile"  @click="isList = !isList") HELLO!
             a.sectag(href="#skill" @click="isList = !isList") SKILL
             a.sectag(href="#career" @click="isList = !isList") CAREER
             a.sectag(href="#works" @click="isList = !isList") WORKS
@@ -142,7 +142,6 @@ export default {
     a{
         position: relative;
         font-size: 2rem;
-        font-weight: bold;
         letter-spacing: 0.1rem;
         &:before{
             content: '';

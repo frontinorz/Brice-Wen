@@ -15,7 +15,7 @@ $pd-tablet: 25px;
 $pd-phone: 10px;
 
 @mixin breakpoint($point) {
-    @if $point==desktop-lg {
+    @if $point==desktop-lg-re {
         @media (min-width: 1440px) {
             @content;
         }
@@ -26,7 +26,7 @@ $pd-phone: 10px;
         }
     }
     @if $point==tablet {
-        @media (max-width: 900px) {
+        @media (max-width: 1024px) {
             @content;
         }
     }

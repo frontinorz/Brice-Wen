@@ -21,7 +21,6 @@ export default {
 @import "./src/assets/style/_variable.scss";
 .pagecontact{
     width: 100%;
-    //min-height: 40vh;
     position: relative;
     display: grid;
     align-items: center;
@@ -68,7 +67,8 @@ export default {
 
 .email{
     margin-top: 1.5rem;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
     &:hover{
         color: lighten($color-main-2, 20);
     }

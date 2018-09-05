@@ -40,10 +40,10 @@ export default {
 .pagecareer{
     background: $color-main-1;
     padding: 4rem $pd-desktop-lg;
-    padding-bottom: 8rem;
+    padding-bottom: 12rem;
     @include breakpoint(desktop){
         padding: 4rem $pd-desktop;
-        padding-bottom: 8rem;
+        padding-bottom: 12rem;
     }
     @include breakpoint(tablet){
         padding: 4rem $pd-tablet;
@@ -59,7 +59,7 @@ export default {
     display: grid;
     grid-auto-rows: auto auto auto;
     text-align: center;
-    margin-top: 6rem;
+    margin-top: 8rem;
     grid-gap: 3rem;
     @include breakpoint(tablet){
         grid-auto-rows: auto
@@ -137,7 +137,6 @@ export default {
     @include breakpoint(tablet){
         grid-template-columns: 1fr;
         grid-gap: 5rem;
-
     }
     &__date{
         display: none;
