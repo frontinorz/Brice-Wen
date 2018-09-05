@@ -1,7 +1,8 @@
 <template lang="pug">
 .profile
     .about
-        .picture
+        img.myimg(src="../assets/self.jpg")
+        //.picture
         .name
             h1.name__cht 温志桓
             h3.name__eng Brice
@@ -67,6 +68,16 @@ export default {
     background-position: center center;
     border-radius: 100%;
     margin-bottom: 1rem;
+}
+.myimg{
+    border-radius: 50%;
+    width: calc(100vw / 5);
+    height: calc(100vw / 5);
+    max-width: 200px;
+    max-height: 200px;
+    min-width: 80px;
+    min-height: 80px;
+    object-fit: cover;
 }
 .name{
     margin-bottom: 0.5rem;
