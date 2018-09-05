@@ -1,8 +1,7 @@
 <template lang="pug">
 .profile
     .about
-        img.myimg(src="../assets/self.jpg")
-        //.picture
+        img.myimg(:src="imgurl")
         .name
             h1.name__cht 温志桓
             h3.name__eng Brice
@@ -18,7 +17,12 @@
 
 <script>
 export default {
-
+    name: 'pageprofile',
+    data(){
+        return {
+            imgurl: './dist/self.jpg',
+        }
+    },
 }
 </script>
 
@@ -55,20 +59,20 @@ export default {
     flex-direction: column;
     animation: fadeIn-Top 1s both;
 }
-.picture{
-    width: calc(100vw / 5);
-    height: calc(100vw / 5);
-    max-width: 200px;
-    max-height: 200px;
-    min-width: 80px;
-    min-height: 80px;
-    background-color: #eee;
-    background: url('~/dist/self.jpg');
-    background-size: cover;
-    background-position: center center;
-    border-radius: 100%;
-    margin-bottom: 1rem;
-}
+// .picture{
+//     width: calc(100vw / 5);
+//     height: calc(100vw / 5);
+//     max-width: 200px;
+//     max-height: 200px;
+//     min-width: 80px;
+//     min-height: 80px;
+//     background-color: #eee;
+//     background: url('~/dist/self.jpg');
+//     background-size: cover;
+//     background-position: center center;
+//     border-radius: 100%;
+//     margin-bottom: 1rem;
+// }
 .myimg{
     border-radius: 50%;
     width: calc(100vw / 5);

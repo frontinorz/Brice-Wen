@@ -37,7 +37,6 @@ export default {
     name: 'pageworks',
     data(){
         return {
-            url: '../assets/workoutube.jpg',
             list: workslist,
             now: workslist[0],
             index: 0,
