@@ -23,18 +23,18 @@ export default {
 
 <style lang="scss" scoped>
 @import "./src/assets/style/_variable.scss";
-.bgimg{
-    width: 100%;
-    min-height: 100vh;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-image: url('~/src/assets/bg.jpg');
-    filter: brightness(80%);
-    background-size: cover;
-    background-position: center center;
-    z-index: -5;
-}
+// .bgimg{
+//     width: 100%;
+//     min-height: 100vh;
+//     position: fixed;
+//     left: 0;
+//     top: 0;
+//     background-image: url('~/src/assets/bg.jpg');
+//     filter: brightness(80%);
+//     background-size: cover;
+//     background-position: center center;
+//     z-index: -5;
+// }
 .profile{
     width: 100%;
     min-height: 100vh;
@@ -62,7 +62,7 @@ export default {
     min-width: 80px;
     min-height: 80px;
     background-color: #eee;
-    background: url('~/./dist/self.jpg');
+    background: url('~/dist/self.jpg');
     background-size: cover;
     background-position: center center;
     border-radius: 100%;
