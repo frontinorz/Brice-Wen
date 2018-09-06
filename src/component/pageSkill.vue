@@ -1,16 +1,15 @@
 <template lang="pug">
 .pageskill
-    .pagetitle.pagetitle-odd SKILL
-    //.hr
+    h1.pagetitle.pagetitle-odd SKILL
     .skill
         .group
-            .title HTML
+            h2.title HTML
             .hr
             ul.list
                 li.item 使用 Pug
                 li.item 有 canvas 使用經驗
         .group
-            .title CSS
+            h2.title CSS
             .hr
             ul.list
                 li.item 使用 SASS
@@ -19,27 +18,27 @@
                 li.item 能不依賴 Framework 建置 RWD
                 li.item 有 Bootstrap 使用經驗
         .group
-            .title Javascript
+            h2.title Javascript
             .hr
             ul.list
-                li.item 使用 ES6
+                li.item 有 ES6 基礎觀念
                 li.item AJAX
-                li.item 有介接第三方API經驗 ( Google Map, Youtube API )
+                li.item 有介接第三方API經驗 (Google Maps, Youtube API)
         .group
-            .title Vue.js
+            h2.title Vue.js
             .hr
             ul.list
                 li.item 使用 Vue-Cli + Webpack 開發
                 li.item 有 SPA 網頁經驗
         .group
-            .title 開發環境
+            h2.title 開發環境
             .hr
             ul.list
                 li.item VSCode
-                li.item 使用 Gulp 進行自動化
+                li.item 有 Gulp 自動化經驗
                 li.item 理解 Git / Github 基本指令運用
         .group
-            .title 其他工具
+            h2.title 其他技能
             .hr
             ul.list
                 li.item TOIEC  750
@@ -47,12 +46,6 @@
                 li.item 基礎 Illustrator
 
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style lang="scss" scoped>
 @import "./src/assets/style/_variable.scss";
@@ -98,7 +91,6 @@ export default {
     position: relative;
     background: rgba(255,255,255,0.1);
     opacity: 0;
-    font-family: 'Noto Sans','Microsoft JhengHei', Arial, sans-serif;
 }
 
 .list{
@@ -119,9 +111,21 @@ export default {
 }
 
 .inView{
-    @for $i from 0 to 6{
-        .group:nth-child(#{$i+1}){
-            animation: fadeIn 0.8s $i*0.3s both;
+    .group{
+        animation: fadeIn 0.8s  both;
+
+        @for $i from 0 to 6{
+            &:nth-child(#{$i+1}){
+                animation-delay: $i*0.3s
+            }
+        }
+
+        @include breakpoint(tablet){
+            @for $i from 0 to 6{
+                &:nth-child(#{$i+1}){
+                    animation-delay: $i*0.6s
+                }
+            }
         }
     }
 }

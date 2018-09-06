@@ -71,7 +71,6 @@ export default {
     color: $color-hl-1;
     font-size: 2.5rem;
     letter-spacing: 5px;
-    //font-weight: bold;
     text-align: center;
     margin-bottom:3rem;
 }

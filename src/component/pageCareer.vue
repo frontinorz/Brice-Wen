@@ -1,6 +1,6 @@
 <template lang="pug">
 .pagecareer
-    .pagetitle CAREER
+    h1.pagetitle CAREER
     //.hr
     .career
         .time
@@ -14,26 +14,21 @@
                 .dot
         .job
             .job__group
-                .job__date 2014 / 7 ─ 2014 / 9
-                .job__title 彩天科技
-                .job__pos 多媒體程式設計實習生
+                h4.job__date 2014 / 7 ─ 2014 / 9
+                h2.job__title 彩天科技
+                h3.job__pos 多媒體程式設計實習生
             .job__group
-                .job__date 2014 / 9 ─ 2015 / 5
-                .job__title 《小王紙》Unity3D繪本解謎遊戲
-                .job__pos 程式 / 企劃
+                h4.job__date 2014 / 9 ─ 2015 / 5
+                h2.job__title 《小王紙》Unity3D繪本解謎遊戲
+                h3.job__pos 程式 / 企劃
             .job__group
-                .job__date 2016 / 8 ─ 2018 / 2
-                .job__title 自家營業裝潢工程行
-                .job__pos 室內設計助理 / 木工學徒
+                h4.job__date 2016 / 8 ─ 2018 / 2
+                h2.job__title 自家營業裝潢工程行
+                h3.job__pos 室內設計助理 / 木工學徒
 
 
 </template>
 
-<script>
-export default {
-
-}
-</script>
 
 <style lang="scss" scoped>
 @import "./src/assets/style/_variable.scss";

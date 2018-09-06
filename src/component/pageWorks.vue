@@ -1,13 +1,13 @@
 <template lang="pug">
 .pageworks
-    .pagetitle WORKS
+    h1.pagetitle.pagetitle-odd WORKS
     .works
         .work(v-for="work in list")
             img.work__img(:src="work.img")
             .work__info
-                .work__name {{ work.name }}
+                h3.work__name {{ work.name }}
                 .work__detail
-                    .work__desc {{ work.desc }}
+                    p.work__desc {{ work.desc }}
                     ul.work__tech
                         li(v-for="item in work.tech") {{ item }}
                     a.work__link(:href="work.link" target="_blank") 作品連結
@@ -42,14 +42,6 @@ export default {
             index: 0,
         }
     },
-    methods:{
-        pageFlip(dir){
-            this.index += dir
-            if( this.index > 2 ) this.index=0
-            if( this.index < 0 ) this.index=2
-            this.now = workslist[this.index]
-        }
-    }
 }
 </script>
 
@@ -176,9 +168,9 @@ export default {
 }
 .inView{
     .work{
-        animation: fadeIn-Top 0.8s both;
+        animation: fadeIn-Top 0.6s both;
         &:nth-child(2){
-            animation-delay: 0.8s;
+            animation-delay: 0.4s;
         }
     }
 }

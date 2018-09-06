@@ -1,6 +1,6 @@
 <template lang="pug">
 .pagecontact
-    .pagetitle.pagetitle-odd CONTACT
+    h1.pagetitle.pagetitle-odd CONTACT
     .contact
         .linkgroup
             a(href="https://github.com/frontinorz" target="_blank")
@@ -57,7 +57,7 @@ export default {
     }
     i{
         cursor: pointer;
-        font-size: 4rem;
+        font-size: 3.5rem;
         margin: 0;
         &:hover{
             color: lighten($color-main-2, 20);
